@@ -8,7 +8,7 @@ import java.util.Objects;
 // *  학생의 동등성을 비교합니다.
 // */
 
-public class StudentVO implements Comparable<StudentVO>{
+public class StudentVO implements Comparable<StudentVO> {
     //학번
     private String sno;
 
@@ -25,7 +25,10 @@ public class StudentVO implements Comparable<StudentVO>{
     private double average;
     private String grade;
 
-    public StudentVO(String sno, String name, int korean, int english, int math,int science) {
+    public StudentVO() {
+    }
+
+    public StudentVO(String sno, String name, int korean, int english, int math, int science) {
         this.sno = sno;
         this.name = name;
         this.korean = korean;
@@ -34,24 +37,26 @@ public class StudentVO implements Comparable<StudentVO>{
         this.science = science;
     }
 
-//    /**
-//     * 학생의 동등성을 비교한다.
-//     * @param  object 비교할 객체
+    /**
+     * 학생의 동등성을 비교한다.
+//     *
+//     * @param object 비교할 객체
 //     * @return 동일한 학번을 가진 경우 {@code true} 그렇지 않으면 {@code false}
-//     * */
+     */
     @Override
     public boolean equals(Object obj) {
-        StudentVO  that = (StudentVO) obj;
+        StudentVO that = (StudentVO) obj;
         return Objects.equals(sno, that.sno);
 
     }
 
 
-//    /**
-//     * 학생의 학번을 기준으로 정렬합니다.
-//     * @param  object 비교할 객체 {@code StudentVO} 객체
+    /**
+     * 학생의 학번을 기준으로 정렬합니다.
+//     *
+//     * @param object 비교할 객체 {@code StudentVO} 객체
 //     * @return 학번의 문자열 비교 결과
-//     * */
+     */
     @Override
     public int compareTo(StudentVO o) {
         return this.sno.compareTo(o.sno);
@@ -60,13 +65,14 @@ public class StudentVO implements Comparable<StudentVO>{
 
     /**
      * 학생 정보를 문자열로 변환합니다.
-     * @return 포맷팅된 학생 정보
-     * */
+//     *
+//     * @return 포맷팅된 학생 정보
+//     */
     @Override
     public String toString() {
 
         String str = "\t%-12s%-11s%-11d%-11d%-11d%-11d%-11d%-12.1f%-8s";
-        return String.format(str,sno,name,korean,english,math,science,total,average);
+        return String.format(str, sno, name, korean, english, math, science, total, average);
     }
 
     public String getSno() {
