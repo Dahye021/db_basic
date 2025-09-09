@@ -1,4 +1,4 @@
-package vo;
+package Student.ManagementSystem.vo;
 
 
 import java.util.Objects;
@@ -39,9 +39,9 @@ public class StudentVO implements Comparable<StudentVO> {
 
     /**
      * 학생의 동등성을 비교한다.
-//     *
-//     * @param object 비교할 객체
-//     * @return 동일한 학번을 가진 경우 {@code true} 그렇지 않으면 {@code false}
+     *
+     * @param object 비교할 객체
+     * @return 동일한 학번을 가진 경우 {@code true} 그렇지 않으면 {@code false}
      */
     @Override
     public boolean equals(Object obj) {
@@ -53,9 +53,9 @@ public class StudentVO implements Comparable<StudentVO> {
 
     /**
      * 학생의 학번을 기준으로 정렬합니다.
-//     *
-//     * @param object 비교할 객체 {@code StudentVO} 객체
-//     * @return 학번의 문자열 비교 결과
+     *
+     * @param object 비교할 객체 {@code StudentVO} 객체
+     * @return 학번의 문자열 비교 결과
      */
     @Override
     public int compareTo(StudentVO o) {
@@ -65,9 +65,9 @@ public class StudentVO implements Comparable<StudentVO> {
 
     /**
      * 학생 정보를 문자열로 변환합니다.
-//     *
-//     * @return 포맷팅된 학생 정보
-//     */
+     *
+     * @return 포맷팅된 학생 정보
+     */
     @Override
     public String toString() {
 

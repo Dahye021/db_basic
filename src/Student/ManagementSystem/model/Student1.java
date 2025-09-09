@@ -1,6 +1,6 @@
 package Student.ManagementSystem.model;
 
-import vo.StudentVO;
+import Student.ManagementSystem.vo.StudentVO;
 
 public interface Student1 {
     /**
