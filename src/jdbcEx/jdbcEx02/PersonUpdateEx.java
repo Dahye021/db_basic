@@ -1,4 +1,4 @@
-package jdbcEx02;
+package jdbcEx.jdbcEx02;
 
 // UPDATE 테이블명 SET (필드 = '수정값') WHERE num= 1;
 // String sql = "UPDATE person  SET id = ? , name = ? WHERE num = ?";
@@ -9,8 +9,8 @@ package jdbcEx02;
                 .append("WHERE num = ?").toString();   */
 
 
-import jdbcEx01.vo.Person;
-import util.DBUtil;
+import jdbcEx.jdbcEx01.vo.Person;
+import jdbcEx.util.DBUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -44,7 +44,7 @@ public class PersonUpdateEx {
             String selectSql = "select id, name from person";
             ResultSet rs = pstmt.executeQuery(selectSql);
             while(rs.next()) {
-                jdbcEx01.vo.Person person = new Person();
+                jdbcEx.jdbcEx01.vo.Person person = new Person();
                 person.setId(rs.getInt(1));
                 person.setName(rs.getString(2));
                 System.out.println(person.getId() + " " + person.getName());

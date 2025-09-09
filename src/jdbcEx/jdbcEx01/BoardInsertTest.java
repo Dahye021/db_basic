@@ -1,4 +1,4 @@
-package jdbcEx01;
+package jdbcEx.jdbcEx01;
 
 import java.io.FileInputStream;
 import java.sql.*;

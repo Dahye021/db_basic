@@ -1,4 +1,4 @@
-package util;
+package jdbcEx.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

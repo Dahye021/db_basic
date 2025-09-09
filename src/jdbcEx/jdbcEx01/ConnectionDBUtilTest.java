@@ -1,13 +1,11 @@
-package jdbcEx01;
+package jdbcEx.jdbcEx01;
 
-import jdbcEx01.vo.Person;
-import util.DBUtil;
+import jdbcEx.jdbcEx01.vo.Person;
+import jdbcEx.util.DBUtil;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import jdbcEx01.vo.Person;
 
 public class ConnectionDBUtilTest {
     public static void main(String[] args) {
@@ -24,7 +22,7 @@ public class ConnectionDBUtilTest {
             String selectSql = "select id, name from person";
             ResultSet rs = stmt.executeQuery(selectSql);
             while(rs.next()) {
-                jdbcEx01.vo.Person person = new Person();
+                jdbcEx.jdbcEx01.vo.Person person = new Person();
                 person.setId(rs.getInt(1));
                 person.setName(rs.getString(2));
                 System.out.println(person.toString());

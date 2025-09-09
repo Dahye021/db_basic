@@ -1,4 +1,4 @@
-package jdbcEx01.vo;
+package jdbcEx.jdbcEx01.vo;
 
 import lombok.*;
 
