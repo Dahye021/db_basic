@@ -1,10 +1,11 @@
-package jdbcEx.jdbcEx01;
+package jdbcEx01;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class UserInsertEx {
+public class ConnectionEx {
     public static void main(String[] args) {
         Connection con = null;
         try {
@@ -14,22 +15,12 @@ public class UserInsertEx {
             System.out.println("Driver loaded successfully!");
 
             // 2. 드라이버로드가 OK라면, 연결 Connection 객체 생성
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookmarketdb?serverTimezone=Asia/Seoul", "root", "guswnalswn1");
+             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookmarketdb?serverTimezone=Asia/Seoul", "root", "mysql1234");
             System.out.println("Connection established!" + con);
-
-
-            //3. Connection객체가 생성되었다면, 쿼리문을  Statements 객체에 담아 DB에게 전송한다.
-            String sql = " insert into users(userid, username, userpassword, userage, useremail) " +
-                    " values('10','신세계','1234',20,'shin@gmail.com')";
+            //3. Connection객체가 생성되었다면, 쿼리문을 아 Statements 객체에 담아 DB에게 전송한다.
 
 
             //4. 전송한 결과를 받아서 처리한다.
-            int result = con.createStatement().executeUpdate(sql);
-            if (result == 1) {
-                System.out.println("Insert successful!");
-            } else {
-                System.out.println("Insert failed!");
-            }
         } catch (Exception e) {
             System.out.println("Driver loaded failed!");
         }finally {

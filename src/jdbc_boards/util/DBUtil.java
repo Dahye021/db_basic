@@ -1,4 +1,4 @@
-package jdbcEx.util;
+package jdbc_boards.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,6 +32,8 @@ public class DBUtil {
             System.out.println("연결 실패");
             e.printStackTrace();
         }
-        return null;
+           return null;
     }
+
+
 }
