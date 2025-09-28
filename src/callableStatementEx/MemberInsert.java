@@ -38,7 +38,9 @@ public class MemberInsert {
         }catch (SQLException e) {
 //            try{conn.rollback();} catch (SQLException ex) {
 //                ex.printStackTrace();
-//            }
+//            }//            try{conn.rollback();} catch (SQLException ex) {
+////                ex.printStackTrace();
+////            }
         }
 
     }
